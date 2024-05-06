@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Javascript</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!--side nav-->
+
+    <nav id="navbar">
+
+    <header>I love JavaScript!</header>
+    <ul>
+        <li>
+           <a class="nav-link" href="#History">History</a>
+        </li>
+        <li>
+            <a class="nav-link" href="#Trade_mark">Trade mark</a>
+         </li>
+         <li>
+            <a class="nav-link" href="#Webside_cliente-side_usage">Webside cliente-side usage</a>
+         </li>
+         <li>
+            <a class="nav-link" href="#Features">Features</a>
+         </li>
+         <li>
+            <a class="nav-link" href="#Syntax">Syntax</a>
+         </li>
+        
+    </ul>
+
+    </nav>
+
+    <!--main doc-->
+
+    <!--section-1-->
+
+    <main id="main-doc">
+      <section class="main-section" id="History">
+
+         <header>History</header>
+
+         <div>
+
+            <p>The first popular web browser with a graphical user interface, Mosaic, was released in 1993. Accessible to non-technical people, it played a prominent role in the rapid growth of the nascent World Wide Web.The lead developers of Mosaic then founded the Netscape corporation, which released a more polished browser, Netscape Navigator, in 1994. This quickly became the most-used.</p>
+            <p>During these formative years of the Web, web pages could only be static, lacking the capability for dynamic behavior after the page was loaded in the browser. There was a desire in the flourishing web development scene to remove this limitation, so in 1995, Netscape decided to add a scripting language to Navigator. They pursued two routes to achieve this: collaborating with Sun Microsystems to embed the Java programming language, while also hiring Brendan Eich to embed the Scheme language.</p>
+
+         </div>
+
+      </section>
+
+      <!--section-2-->
+
+      <section class="main-section" id="Trade_mark">
+
+         <header>Trade mark</header>
+
+         <div>
+            <p>"JavaScript" is a trademark of Oracle Corporation in the United States. The trademark was originally issued to Sun Microsystems on 6 May 1997, and was transferred to Oracle when they acquired Sun in 2009.</p>
+            </div>
+
+
+      </section>
+
+      <!--section-3-->
+
+      <section class="main-section" id="Webside_cliente-side_usage">
+
+         <header>Webside cliente side usage</header>
+
+         <div>
+            <p>JavaScript is the dominant client-side scripting language of the Web, with 98% of all websites (mid–2022) using it for this purpose.</p>
+
+            <p>Scripts are embedded in or included from HTML documents and interact with the DOM. All major web browsers have a built-in JavaScript engine that executes the code on the user's device.</p>
+            <p>Examples of scripted behavior:</p>
+
+            <ul>
+               <li>Loading new web page content without reloading the page, via Ajax or a WebSocket. For example, users of social media can send and receive messages without leaving the current page.</li>
+               <li>Web page animations, such as fading objects in and out, resizing, and moving them.</li>
+               <li>Playing browser games.</li>
+               <li>Controlling the playback of streaming media.</li>
+               <li>Generating pop-up ads or alert boxes.</li>
+            </ul>
+
+         </div>
+
+      </section>
+
+      <!--section-4-->
+
+      <section class="main-section" id="Features">
+
+         <header>Features</header>
+
+         <div>
+            
+            <p>The following features are common to all conforming ECMAScript implementations unless explicitly specified otherwise.</p>
+
+            <p>JavaScript supports much of the structured programming syntax from C (e.g., if statements, while loops, switch statements, do while loops, etc.). One partial exception is scoping: originally JavaScript only had function scoping with var; block scoping was added in ECMAScript 2015 with the keywords let and const. Like C, JavaScript makes a distinction between expressions and statements. One syntactic difference from C is automatic semicolon insertion, which allow semicolons (which terminate statements) to be omitted.</p>
+
+            <p>JavaScript has received criticism for the way it implements these conversions as the complexity of the rules can be mistaken for inconsistency.</p>
+
+            <p>For example, when adding a number to a string, the number will be cast to a string before performing concatenation, but when subtracting a number from a string, the string is cast to a number before performing subtraction.</p>
+
+         </div>
+
+      </section>
+
+      <!--section-5-->
+
+
+      <section class="main-section" id="Syntax">
+
+         <header>Syntax</header>
+
+         <div>
+
+         <p> 
+Variables in JavaScript can be defined using either the var, let or const keywords. Variables defined without keywords will be defined at the global scope</p>
+         
+         <code>
+            // Declares a function-scoped variable named `x`, and implicitly assigns the
+// special value `undefined` to it. Variables without value are automatically
+// set to undefined.
+// var is generally considered bad practice and let and const are usually preferred.
+var x;
+
+         </code>
+
+         <p>However, most runtime environments have a console object that can be used to print output.
+         </p>
+
+         <code>
+            console.log("Hello, World!");
+         </code>
+
+         <p>In HTML documents, a program like this is required for an output:</p>
+         
+      
+            <code>// Text nodes can be made using the "write" method.
+// This is frowned upon, as it can overwrite the document if the document is fully loaded.
+document.write('foo');</code>
+
+         <p>A simple recursive function to calculate the factorial of a natural number:</p>
+         
+      
+            <code>function factorial(n) {
+    // Checking the argument for legitimacy. Factorial is defined for positive integers.
+    if (isNaN(n)) {
+        console.error("Non-numerical argument not allowed.");
+        return NaN; // The special value: Not a Number
+    }
+    if (n === 0)
+        return 1; // 0! = 1
+    if (n < 0)
+        return undefined; // Factorial of negative numbers is not defined.
+    if (n % 1) {
+        console.warn(`${n} will be rounded to the closest integer. For non-integers consider using gamma function instead.`);
+        n = Math.round(n);
+    }
+    // The above checks need not be repeated in the recursion, hence defining the actual recursive part separately below.
+
+    // The following line is a function expression to recursively compute the factorial. It uses the arrow syntax introduced in ES6.
+    const recursivelyCompute = a => a > 1 ? a * recursivelyCompute(a - 1) : 1; // Note the use of the ternary operator `?`.
+    return recursivelyCompute(n);
+}
+
+factorial(3); // Returns 6</code>
+
+
+         <p>An anonymous function (or lambda):</p>
+         
+      
+            <code>const counter = function() {
+    let count = 0;
+    return function() {
+        return ++count;
+    }
+};</code>
+
+
+      
+
+      
+      </div>
+
+      </section>
+
+
+    </main>
+    
+</body>
+</html>

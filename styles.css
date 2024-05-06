@@ -1,0 +1,132 @@
+html,
+
+body {
+    display: block;
+    margin: 8px;
+    background-color: #BDB76B;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+
+}
+
+/* side nav*/
+
+#navbar {
+    position: fixed;
+    min-width: 310px;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    border-right: 2px solid black;
+    color: black;
+}
+
+header {
+    color: black;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: thin;
+}
+/*this really important to keep the same layout*/
+ul {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+
+}
+
+
+#navbar ul {
+    height: 88%;
+    padding: 0;
+   
+}
+
+#navbar li {
+    
+    color: black;
+    width: 100%;
+}
+
+#navbar a {
+    text-decoration: ;
+    color: black;
+    cursor: pointer;
+    display: block;
+    padding: 10px 30px;
+}
+
+/* main doc */
+
+#main-doc  {
+
+    position: absolute;
+    margin-left: 300px;
+    margin-bottom: 100px;
+    padding: 20px;
+    
+}
+
+section {
+    display: block;
+}
+
+.main-section header {
+    text-align: left;
+    margin: 0px;
+}
+
+
+p {
+    display: block;
+    
+}
+
+section li {
+    margin: 15px 0px 0px 20px;
+}
+/* here I follow the same code that the example as I never use <code> element */
+code {
+    display: block;
+    text-align: justify;
+    /* I learned abotu pre-line */
+    white-space: pre-line;
+    position: relative;
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+    
+}
+
+
+
+@media only screen and (max-width: 815px) {
+    /* for moobile phones */
+    #navbar ul {
+        border: 1px solid;
+        height: 207px;
+    }
+
+    #navbar {
+        background-color: #BDB76B;
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 300px;
+        border: none;
+        z-index: 1;
+        border-bottom: 2px solid;
+    }
+
+    #main-doc {
+        position: relative;
+        margin-left: 0;
+        margin-top: 270px;
+    }
+
+}
